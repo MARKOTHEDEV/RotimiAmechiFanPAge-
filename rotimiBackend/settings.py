@@ -144,8 +144,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
 
 "http://localhost:3000",
-'http://www.amechisupportgroup.com/',
-'http://www.amechisupportgroup.org/',
+'http://www.amechisupportgroup.com',
+'http://www.amechisupportgroup.org',
 ]
 
 CORS_ALLOW_METHODS = [
