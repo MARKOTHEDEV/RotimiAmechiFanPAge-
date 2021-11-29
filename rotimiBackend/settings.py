@@ -171,7 +171,6 @@ CORS_ALLOW_HEADERS = [
 ]
 
 
-
-
+AUTH_USER_MODEL='mainApp.User'
 
 django_heroku.settings(config=locals(), staticfiles=False,logging=False)
