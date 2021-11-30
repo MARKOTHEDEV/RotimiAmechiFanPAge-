@@ -170,7 +170,10 @@ CORS_ALLOW_HEADERS = [
 'x-requested-with',
 ]
 
+EMAIL_HOST ='smtp-relay.sendinblue.com'
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 
 AUTH_USER_MODEL='mainApp.User'
-
+# daboadebayo175
 django_heroku.settings(config=locals(), staticfiles=False,logging=False)

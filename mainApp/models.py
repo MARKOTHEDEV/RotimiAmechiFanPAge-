@@ -100,6 +100,8 @@ class RegisterData(models.Model):
     age = models.IntegerField()
     state = models.CharField(max_length=200)
     local_govt = models.CharField(max_length=200)
+    ward = models.CharField(max_length=250,default='')
+    unit = models.CharField(max_length=250,default='')
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
@@ -120,7 +122,7 @@ class BlogPosts(models.Model):
         verbose_name_plural = "All Blog Posts"
 
     def __str__(self):
-        return f'{self.title} by {self.author_name}'
+        return f'{self.title} by {self.author}'
 
 class BlogContent(models.Model):
     blog_post = models.ForeignKey(BlogPosts,on_delete=models.CASCADE)
