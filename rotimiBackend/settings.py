@@ -176,4 +176,6 @@ EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
 
 AUTH_USER_MODEL='mainApp.User'
 # daboadebayo175
-django_heroku.settings(config=locals(), staticfiles=False,logging=False)
+django_heroku.settings(config=locals(),
+#  staticfiles=False,
+ logging=False)
