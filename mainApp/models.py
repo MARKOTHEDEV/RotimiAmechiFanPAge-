@@ -102,6 +102,7 @@ class RegisterData(models.Model):
     local_govt = models.CharField(max_length=200)
     ward = models.CharField(max_length=250,default='')
     unit = models.CharField(max_length=250,default='')
+    stateOfOrigin = models.CharField(max_length=350,default='')
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
