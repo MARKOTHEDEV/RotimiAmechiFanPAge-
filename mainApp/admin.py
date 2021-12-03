@@ -7,9 +7,10 @@ from django.contrib.auth.forms import ReadOnlyPasswordHashField
 from django.core.exceptions import ValidationError
 
 from .models import ( News,RegisterData,User,BlogPosts,BlogContent)
-
+#for danloanding csv files
+from import_export.admin import  ImportExportModelAdmin
 @admin.register(RegisterData)
-class RegisterDataAdmin(admin.ModelAdmin):
+class RegisterDataAdmin(ImportExportModelAdmin):
     list_display  =['first_name','last_name','phone_number','state']
     list_filter =('state','local_govt','sex')
 
