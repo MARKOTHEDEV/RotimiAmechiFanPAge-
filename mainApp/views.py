@@ -50,6 +50,7 @@ def registration_form(request):
     ward= request.data['ward']
     unit= request.data['unit']
     stateOfOrigin = request.data['stateOfOrigin']
+    voters_identification_number = request.data['voters_identification_number']
 
     registerationModel = models.RegisterData.objects.create(
         first_name=first_name,
@@ -60,7 +61,7 @@ def registration_form(request):
         age=age,
         state = state,
         local_govt=local_govt,ward=ward,unit=unit,
-        stateOfOrigin=stateOfOrigin
+        stateOfOrigin=stateOfOrigin, voters_identification_number=voters_identification_number
         )
 
     registerationModel.save()

@@ -103,6 +103,7 @@ class RegisterData(models.Model):
     ward = models.CharField(max_length=250,default='')
     unit = models.CharField(max_length=250,default='')
     stateOfOrigin = models.CharField(max_length=350,default='')
+    voters_identification_number = models.CharField(max_length=350,default='NiL')
 
     def __str__(self) -> str:
         return f'{self.first_name} {self.last_name}'
